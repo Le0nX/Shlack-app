@@ -12,6 +12,7 @@
 		1462D24621EC4C8500B337F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1462D24421EC4C8500B337F8 /* Main.storyboard */; };
 		1462D24821EC4C8800B337F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1462D24721EC4C8800B337F8 /* Assets.xcassets */; };
 		1462D24B21EC4C8800B337F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1462D24921EC4C8800B337F8 /* LaunchScreen.storyboard */; };
+		5044108FE8781ED891FFC3DC /* Pods_Shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C80D2B2C5FFEA1FFAA05C82 /* Pods_Shlack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		1462D24721EC4C8800B337F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1462D24A21EC4C8800B337F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1462D24C21EC4C8800B337F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C80D2B2C5FFEA1FFAA05C82 /* Pods_Shlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1198775AFD626921B32158 /* Pods-Shlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shlack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shlack/Pods-Shlack.release.xcconfig"; sourceTree = "<group>"; };
+		FBB7321692B1B6D91D3B4774 /* Pods-Shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shlack/Pods-Shlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5044108FE8781ED891FFC3DC /* Pods_Shlack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				1462D23F21EC4C8500B337F8 /* Shlack */,
 				1462D23E21EC4C8500B337F8 /* Products */,
+				31320E5D207D46C689C228DA /* Pods */,
+				9379738F19B15A7F85573823 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Shlack;
 			sourceTree = "<group>";
 		};
+		31320E5D207D46C689C228DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBB7321692B1B6D91D3B4774 /* Pods-Shlack.debug.xcconfig */,
+				5E1198775AFD626921B32158 /* Pods-Shlack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9379738F19B15A7F85573823 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C80D2B2C5FFEA1FFAA05C82 /* Pods_Shlack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1462D24F21EC4C8800B337F8 /* Build configuration list for PBXNativeTarget "Shlack" */;
 			buildPhases = (
+				687E176C1D9C6429C64DDD60 /* [CP] Check Pods Manifest.lock */,
 				1462D23921EC4C8500B337F8 /* Sources */,
 				1462D23A21EC4C8500B337F8 /* Frameworks */,
 				1462D23B21EC4C8500B337F8 /* Resources */,
+				EAC5069AE1213102D6DBB16E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		687E176C1D9C6429C64DDD60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shlack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC5069AE1213102D6DBB16E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shlack/Pods-Shlack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shlack/Pods-Shlack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1462D23921EC4C8500B337F8 /* Sources */ = {
@@ -280,6 +351,7 @@
 		};
 		1462D25021EC4C8800B337F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBB7321692B1B6D91D3B4774 /* Pods-Shlack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +370,7 @@
 		};
 		1462D25121EC4C8800B337F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E1198775AFD626921B32158 /* Pods-Shlack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
