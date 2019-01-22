@@ -54,22 +54,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sA8-Ug-cuc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3I-G8-jN5">
-                                        <rect key="frame" x="8" y="28" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3I-G8-jN5">
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="Hez-eT-bJ6"/>
+                                            <constraint firstAttribute="width" constant="24" id="xyV-yf-chT"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-vs-SZQ">
-                                        <rect key="frame" x="166" y="33" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shlack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-vs-SZQ">
+                                        <rect key="frame" x="162" y="45.5" width="51" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="yXg-vs-SZQ" firstAttribute="centerX" secondItem="sA8-Ug-cuc" secondAttribute="centerX" id="5cy-gL-pCe"/>
+                                    <constraint firstAttribute="bottom" secondItem="b3I-G8-jN5" secondAttribute="bottom" constant="12" id="Bcm-RY-fv9"/>
+                                    <constraint firstItem="yXg-vs-SZQ" firstAttribute="centerY" secondItem="b3I-G8-jN5" secondAttribute="centerY" id="KNG-rL-qBs"/>
                                     <constraint firstAttribute="height" constant="77" id="QCV-xD-jry"/>
+                                    <constraint firstItem="b3I-G8-jN5" firstAttribute="leading" secondItem="sA8-Ug-cuc" secondAttribute="leading" constant="12" id="fOf-my-zSp"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -81,10 +87,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QSe-6c-zsj"/>
                     </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="b3I-G8-jN5" id="cgl-uu-Czi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wox-4d-HXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973.60000000000002" y="669.71514242878561"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
 </document>
